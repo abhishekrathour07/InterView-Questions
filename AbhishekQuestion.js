@@ -52,6 +52,10 @@
 
 // Question: What is -5%2
 // Answer:-1. the result of remainder always get the symbol of first operand
+
+console.log(typeof NaN); //number
+//Explaination : If we divide "priya"/2 then it will give NaN. 
+
 ===============================================================================================================================================================
 let a = [];
 let b = [];
@@ -75,9 +79,7 @@ let z= [1,2,3]
 let a ={name: "priya"}
 console.log(...z); // 1 2 3 
 //Explaination : ...z means destructing happened i.e, all the elements are come out from an array/object.
-------------------------------
-console.log(typeof NaN); //number
-//Explaination : If we divide "priya"/2 then it will give NaN. 
+
 --------------------------------
 let data = 10 - -10;
 console.log(data); //20
