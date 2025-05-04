@@ -1,1 +1,1 @@
-console.log(findDuplicates([1, 2, 3, 4, 1, 2, 3]))
+Step 2 started
