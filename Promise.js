@@ -30,3 +30,16 @@ newPromise.then((data) => {
 })
 .catch((error)=>console.log(error)
 ).finally(()=>console.log("I am always executed no one can restrict me"))
+
+
+
+
+//   const promise = new Promise((resolve) => {
+//     console.log("Second");
+//   });
+
+//   promise.then((result) => {
+//     console.log(result);
+//   });
+
+//   console.log("Third");
