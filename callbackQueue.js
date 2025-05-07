@@ -1,9 +1,7 @@
 const fs = require("fs")
 
 fs.readFile('Promise.js', () => {
-    setTimeout(() => {
-        console.log('setTimeout');
-    }, 0);
+   
 
     setImmediate(() => {
         console.log('setImmediate');
@@ -21,3 +19,6 @@ setTimeout(() => {
 }, 0)
 console.log("Hello last")
 
+ setTimeout(() => {
+        console.log('setTimeout');
+    }, 0);

@@ -1,10 +1,17 @@
 
-console.log(x)
 name()
 var x = 10;
 let y = 20
 
 function name() {
+    const b =19
     const x = 20;
-    console.log(x)
+    return function () {
+        console.log(x)
+
+    }
 }
+const a = name()
+ a()
+
+
