@@ -1,12 +1,30 @@
-
-Array.prototype.mymap = function (logic) {
-    let array = [];
-    for (let index = 0; index < this.length; index++) {
-        array.push(logic(this[index]));
+Array.prototype.mymap = function () {
+    const res = [];
+    for (let i = 0; i < this.length; i++) {
+        res.push(logic(a = this[i]))
     }
-    return array;
+    return res
 }
 
-const value = [1, 2, 3, 4, 5];
-const data = value.mymap((r) => r * 2);
+const arr = [1, 2, 3, 4, 5];
+const data = arr.mymap((val) => val * 2);
 console.log(data);
+
+Array.prototype.myfilter = function (logic) {
+    const res = [];
+    for (let i = 0; i < this.length; i++) {
+        if (logic(this[i])) {
+            res.push(this[i]);
+        }
+    }
+    return res
+}
+
+
+const data1 = arr.mymap((val) => val !== 2);
+console.log(data1);
+
+
+Array.prototype.myfind = function () {
+
+}

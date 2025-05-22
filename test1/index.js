@@ -13,5 +13,5 @@ function name() {
 }
 const a = name()
  a()
-
+console.log("Abhishek Singh")
 
