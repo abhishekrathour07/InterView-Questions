@@ -13,7 +13,7 @@ const name2 = {
 
 name1.printDetail("Varansi", "Up")
 
-// call method also known as function borrowing -->call a function with specified this and argument
+// call method also known as function borrowing --> call a function with specified this and argument
 name1.printDetail.call(name2, "Buxar", "Bihar")
 
 // apply --> similar to call but takes second params as array
