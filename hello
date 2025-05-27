@@ -1,144 +1,85 @@
-// 1. Write an ES6 function that takes an array of numbers and returns an array with each number incremented by 3 using the map method. 
+// // 1.Write a function to calculate sum of n elements
 
-const numbers = [1, 2, 3, 4, 5];
-const incrementNumbers = (numbers) => numbers.map((value) => value + 3);
-console.log(incrementNumbers(numbers));
-// Output: [4, 5, 6, 7, 8]
+// // let sum = 0;
+// // const sumOfNNumbers = (numbers) => {
+// //   numbers.map((n) => (sum += n));
+// //   return sum;
+// // };
+// // console.log(sumOfNNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]));
+// //2.write a function which will take an array of "n" numbers as an argument and will return the object containing maximum number, minimum number and avg of all numbers in array.
 
-// 2. Write an ES6 function that takes an array of strings and returns an array with all the strings capitalised using the map method.
+// const givenNumber = [1, 2, 3, 4, 56, 7, 5, 9];
 
-const myArray = ["apple", "banana", "cherry"];
-const capitalizeArray = (myArray) =>
-  myArray.map((value) => value.toUpperCase());
-console.log(capitalizeArray(myArray));
-// Output: ["APPLE", "BANANA", "CHERRY"]
+// // const getNumData = (givenNumber) => {
+// //   let sum = 0;
+// //   let arrInAc = givenNumber.sort((a, b) => a - b);
 
-// 3. Write an ES6 function that takes an array of objects representing people and returns an array of their ages using the map method.
+// //   let maxNu = arrInAc[arrInAc.length - 1];
+// //   let minNum = arrInAc[0];
+// //   givenNumber.map((num) => (sum += num));
+// //   let av = sum / arrInAc.length;
+// //   return { maxNu, minNum, av };
+// // };
+// const getNumData = (givenNumber) => {
+//   let sum = 0;
+//   let arrInAc = givenNumber.sort((a, b) => a - b);
 
+//   givenNumber.map((num) => (sum += num));
+
+//   return {
+//     maxNum: arrInAc[arrInAc.length - 1],
+//     minNum: arrInAc[0],
+//     av: sum / arrInAc.length,
+//   };
+// };
+
+// console.log(getNumData(givenNumber));
+
+//Given an array of numbers, write a function that returns the sum of all the even numbers.
+// Output: 20
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// let sum = 0;
+// const sumOfNum = (numbers) => {
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2 === 0) sum += numbers[i];
+//   }
+//   return sum;
+// };
+// let sum1 = 0;
+// const sumOfNumbers = numbers.reduce(
+//   (acc, curr) => (curr % 2 === 0 ? acc + curr : acc, 0)
+// );
+// console.log(sumOfNum(numbers));
+// console.log(sumOfNumbers);
+
+// Given an array of numbers, write a function that returns the difference between the largest and smallest numbers.
+// Output: 8
+
+// const numbers = [10, 2, 7, 14, 5];
+// const diffBetweenTwoNum = (numbers) => {
+//   let sortnum = numbers.sort((a, b) => a - b);
+//   return sortnum[numbers.length - 1] - sortnum[0];
+// };
+// console.log(diffBetweenTwoNum(numbers));
+
+// const maxNum = numbers.reduce((acc, curr) => Math.max(acc, curr));
+// const minNum = numbers.reduce((acc, curr) => Math.min(acc, curr));
+
+// const diff = maxNum - minNum;
+// console.log(diff);
+// const maxNum1 = Math.max(...numbers);
+// const minNum1 = Math.min(...numbers);
+
+// const diffBtn = maxNum1 - minNum1;
+// console.log(diffBtn);
+
+//Given an array of objects representing people, where each object has a name property and an age property, write a function that returns the name of the oldest person.
 const people = [
-  { name: "Ankit", age: 25 },
-  { name: "Vinit", age: 24 },
-  { name: "Shashi", age: 29 },
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 20 },
+  { name: "David", age: 35 },
 ];
-const getAges = (people) => people.map((value) => value.age);
-const ages = getAges(people);
-console.log(ages); // Output: [25, 24, 29]
-//4. Write an ES6 function that takes an array of objects representing products and returns an array with the product names in all lower case letters using the map method.
-
-const products = [
-  { name: "Lip Balm", stock: 100 },
-  { name: "PERFUME", stock: 400 },
-  { name: "Socks", stock: 200 },
-];
-const getProductNamesInLowerCase = (products) =>
-  products.map((value) => value.name.toLowerCase());
-console.log(getProductNamesInLowerCase(products));
-// Output: ["lip balm", "perfume", "socks"]
-
-// 5. Write an ES6 function that takes an array of objects representing cities and returns an array of their names using the map method
-
-const cities = [
-  { name: "New York", population: 8538000 },
-  { name: "Los Angeles", population: 3976000 },
-  { name: "Bangalore", population: 13608000 },
-];
-const getCityNames = (cities) => cities.map((value) => value.name);
-
-console.log(getCityNames(cities));
-// Output: ["New York", "Los Angeles", "Bangalore"]
-
-// 6. Write an ES6 function that takes an array of strings and returns an array with only the strings that have a length greater than 5
-// Your ES6 function here
-
-const fruits = ["apple", "banana", "cherry", "watermelon", "pineapple"];
-const filterLongStrings = (fruits) =>
-  fruits.filter((value) => value.length > 5);
-console.log(filterLongStrings(fruits));
-// Output: ["banana", "watermelon", "pineapple"]
-
-// 7. Write an ES6 function that takes an array of numbers and returns an array with only the numbers that are divisible by 3 and also by 5.
-
-const numbers1 = [1, 2, 30, 4, 15];
-const isDivisibleBy3and5 = (numbers1) =>
-  numbers1.filter((num) => num % 3 === 0 && num % 5 === 0);
-console.log(isDivisibleBy3and5(numbers1));
-// Output: [30, 15]
-
-// 8. Write an ES6 function that takes an array of objects with the properties name and age, and returns an array with only the objects that have an age greater than 30.
-// Your ES6 code here
-
-const people1 = [
-  { name: "Rahul", age: 25 },
-  { name: "Raj", age: 35 },
-  { name: "Vijay", age: 45 },
-];
-const filterByAge = (people1) => people1.filter((obj) => obj.age > 30);
-console.log(filterByAge(people1));
-// Output: [{ name: 'Raj', age: 35 }, { name: 'Vijay', age: 45 }]
-
-// 9. Write an ES6 function that takes an array of objects with the properties name and score, and returns an array with only the objects that have a score greater than 80.
-// Your ES6 code here
-
-const students = [
-  { name: "Aditya", score: 85 },
-  { name: "Bob", score: 75 },
-  { name: "Charlie", score: 90 },
-];
-const filterByScore = (students) => students.filter((std) => std.score > 80);
-console.log(filterByScore(students));
-// Output: [{ name: 'Aditya', score: 85 }, { name: 'Charlie', score: 90 }]
-
-//10. Write an ES6 function that takes an array of objects with the properties name, age and city, and returns an array with only the objects that have a city property of "Indore" and age greater than 70.
-// Your ES6 code here
-
-const people2 = [
-  { name: "Ridhima", age: 75, city: "Indore" },
-  { name: "Akshay", age: 60, city: "Delhi" },
-  { name: "Udit", age: 80, city: "Indore" },
-  { name: "Venki", age: 80, city: "Bangalore" },
-];
-const filterByCityAndAge = (people2) =>
-  people2.filter((peop) => peop.city === "Indore" && peop.age > 70);
-const filteredPeople = filterByCityAndAge(people2);
-console.log(filteredPeople);
-// Output: [{ name: 'Ridhima', age: 75, city: 'Indore' }, { name: 'Udit', age: 80, city: 'Indore' }]
-
-// 11. Write an ES6 function that takes an array of objects containing book information (title, author, genre) and returns an array with only the books of "Science Fiction".
-// Your ES6 code here
-
-const books = [
-  {
-    title: "The Hitchhiker's Guide to the Galaxy",
-    author: "Douglas Adams",
-    genre: "Science Fiction",
-  },
-  { title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Fiction" },
-  { title: "1984", author: "George Orwell", genre: "Science Fiction" },
-  { title: "Pride and Prejudice", author: "Jane Austen", genre: "Romance" },
-];
-const filterByGenre = (books) =>
-  books.filter((book) => book.genre === "Science Fiction");
-const filteredBooks = filterByGenre(books, "Science Fiction");
-console.log(filteredBooks);
-// Output: [{title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", genre: "Science Fiction"}, {title: "1984", author: "George Orwell", genre: "Science Fiction"}]
-
-// 12. Write an ES6 function that takes an array of objects containing employee information (name, age, salary) and returns an array with only the employees who earn a salary above 22000 and age is above 25.
-
-// Your ES6 code here
-
-const employees = [
-  { name: "Abhay", age: 25, salary: 20000 },
-  { name: "Joice", age: 30, salary: 35000 },
-  { name: "Reena", age: 35, salary: 15000 },
-  { name: "Jeena", age: 40, salary: 50000 },
-];
-const filterBySalary = (employees, sal, age) =>
-  employees.filter((emp) => emp.salary > sal && emp.age > age);
-const filteredEmployees = filterBySalary(employees, 22000, 25);
-console.log(filteredEmployees);
-// Output: [{name: "Joice", age: 30, salary: 35000}, {name: "Jeena", age: 40, salary: 50000}]
-
-const num1 = [2, 3, 4, 5, 6, 7, 8];
-
-const numCheck = (num1) => num1.filter((a, b, c) => console.log(a, b, c));
-numCheck(num1);
+// Output: David
