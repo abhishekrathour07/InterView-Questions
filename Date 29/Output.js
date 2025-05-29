@@ -43,7 +43,7 @@
 // const nums = [1, 2, 3, 4, 5, 6, 7];
 // nums.forEach((n) => {
 //     if (n % 2 === 0) {
-//         // break; // it will fives error beacuse we cannot use the callback function inside foreach loop 
+//         // break; 
 //     }
 //     console.log(n);
 // });
