@@ -1,7 +1,7 @@
 Array.prototype.mymap = function (logic) {
     const res = [];
     for (let i = 0; i < this.length; i++) {
-        res.push(logic(a = this[i]))
+        res.push(logic(this[i]))
     }
     return res
 }

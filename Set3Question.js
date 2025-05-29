@@ -127,3 +127,9 @@ const numbers = [10, 5, 8, 2, 6];
 
 const minValueReduce = (arr) => arr.reduce((acc, val) => acc < val ? acc : val);
 console.log(minValueReduce(numbers))
+
+
+console.log(fn)
+const fn =()=>{
+    console.log("Hello")
+}
