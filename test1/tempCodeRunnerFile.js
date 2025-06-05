@@ -1,1 +1,0 @@
-nsole.log(x)
