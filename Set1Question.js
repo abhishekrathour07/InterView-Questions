@@ -8,8 +8,9 @@ console.log(arrayplus3([1, 2, 3, 4, 5, 6]));
 
 // 2. Write an ES6 function that takes an array of strings and returns an array with all the strings capitalised using the map method.
 
+console.log("Question 2")
 function strManipulation(array) {
-    const res = array.map((val) => val.toUpperCase())
+    const res = array.map((val) => val.charAt(0).toUpperCase()+val.slice(1))
     return res;
 }
 console.log(strManipulation(['apple', 'bidi', 'cigratte', 'd']))
@@ -35,7 +36,7 @@ const products = [
 const fnProduct = products.map(val => val.name.toLowerCase())
 console.log(fnProduct)
 
-// 5. Write an ES6 function that takes an array of objects representing cities and returns an array of their names using the map method
+// 5. Write an ES6 function that takes an array of objects representing cities and returns an array of their names using the map method.
 
 const cities = [
     { name: "New York", population: 8538000 },

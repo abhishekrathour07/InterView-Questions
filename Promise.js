@@ -7,7 +7,9 @@ const promise = new Promise((resolve, reject) => {
     }
 })
 
-promise.then((data) => console.log(data)).catch((error) => console.log(error)).finally(() => console.log("I am alaways executed"))
+promise.then((data) => console.log(data))
+.catch((error) => console.log(error))
+.finally(() => console.log("I am alaways executed"))
 
 
 const newPromise = new Promise((resolve, reject) => {
@@ -34,12 +36,12 @@ newPromise.then((data) => {
 
 
 
-//   const promise = new Promise((resolve) => {
-//     console.log("Second");
-//   });
+  const promise1 = new Promise((resolve) => {
+    console.log("Second");
+  });
 
-//   promise.then((result) => {
-//     console.log(result);
-//   });
+  promise1.then((result) => {
+    console.log(result);
+  });
 
-//   console.log("Third");
+  console.log("Third");

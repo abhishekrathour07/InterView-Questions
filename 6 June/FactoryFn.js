@@ -6,14 +6,37 @@
 // // }
 
 
-// function nameFn(name) {
-//    this.name  = name
-// }
+function nameFn(name) {
+    this.name = name;
+}
 
-// const value = new nameFn("Abhishek")
-// console.log(value)
+nameFn.prototype.sayHello = function () {
+    console.log(`Hello dear ${this.name}`);
+};
 
-// nameFn.prototype.sayHello = function(){
+const value = new nameFn("Abhishek");
+console.log(value)
 
-// }
+value.sayHello(); // Output: Hello dear Abhishek
 
+const closure = () => {
+
+     const print = (i) => {
+            setTimeout(() => {
+                (function (i) {
+                    console.log(i)
+                })(i)
+            }, 1000 * i)
+        }
+    for (var i = 0; i < 6; i++) {
+
+        print(i)
+    }
+}
+
+const count =0 
+
+function abc(){
+    console.log(count)
+}
+closure()

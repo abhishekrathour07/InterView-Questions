@@ -15,7 +15,7 @@ function curring(a) {
     }
 }
 // console.log(curring(1)(2)(4)) 2 3 4 2 5 7
-const x = curring(10)()
+const x = curring(10)(3)
 console.log(x(3))
 
 
