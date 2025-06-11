@@ -112,3 +112,35 @@ var x = 23;
         var x = 21;
     })();
 })();
+
+const count = 1
+const a = ()=>{
+  console.log(count++)
+}
+const b = ()=>{
+  let x = 5
+  function name() {
+    console.log("HEllo")
+  }
+}
+
+if([]){
+    console.log("Hello coder")
+}
+
+
+
+// setTimeout(() => console.log("fifth",1), 0);
+// console.log("first",2);
+// new Promise(res => {
+//  console.log("third",3)
+//  res();
+// }).then(() => console.log("fourth",4));
+// console.log("second",5);
+
+
+for(var i=0;i<5;i++){
+    setTimeout((i)=>{
+       console.log(i)
+    },i*1000)
+}
