@@ -185,7 +185,7 @@ resume =  ["React.js",
     "lambda",
     "Firebase",
     "Cloudinary"
-  ]
+ ]  
 
 job_description = ["JavaScript", "React", "AWS", "MongoDB", "Teamwork", "node.js", "next.js"]
 
